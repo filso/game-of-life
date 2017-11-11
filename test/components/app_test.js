@@ -8,7 +8,13 @@ describe('App' , () => {
     component = renderComponent(App);
   });
 
-  it('renders something', () => {
-    expect(component).to.exist;
+  it('has board', () => {
+    let el = component.find('.board');
+    expect(el).to.exist;
+  });
+
+  it('has controls', () => {
+    let el = component.find('.controls');
+    expect(el).to.exist;
   });
 });

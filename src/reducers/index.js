@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
+import controlsReducer from './controls_reducer';
+import boardReducer from './board_reducer';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  board: boardReducer,
+  controls: controlsReducer
 });
 
 export default rootReducer;

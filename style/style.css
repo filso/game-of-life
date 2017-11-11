@@ -1,0 +1,24 @@
+.board {
+  margin-top: 20px;
+  border: 1px solid #999;
+  display: inline-block;
+}
+
+td.cell {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+td.cell.alive {
+  background-color: #666;
+}
+
+.controls {
+  margin: 10px;
+}
+
+.controls button {
+  margin: 5px 10px;
+}

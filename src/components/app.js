@@ -1,9 +1,44 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class App extends Component {
+import Board from './board';
+import Controls from './controls';
+
+import { NEXT_STEP } from '../actions/types';
+import { STEP_LENGTH_MILLISEC } from '../const';
+
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.scheduleNextStep();
+  }
+
+  scheduleNextStep() {
+    setTimeout(() => {
+      if (!this.props.paused) {
+        this.props.dispatch({ type: NEXT_STEP });
+      }
+      this.scheduleNextStep();
+    }, STEP_LENGTH_MILLISEC / this.props.speed);
+  }
+
   render() {
+
     return (
-      <div>React simple starter</div>
+      <div>
+        <Board />
+        <Controls />
+      </div>
     );
   }
 }
+
+function mapStateToProps({ controls: { paused, speed }}) {
+  return {
+    paused,
+    speed
+  };
+}
+
+export default connect(mapStateToProps)(App);
