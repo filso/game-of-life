@@ -1,12 +1,9 @@
 import { renderComponent , expect, $ } from '../test_helper';
 import Board from '../../src/components/board';
 
-import { BOARD_WIDTH, BOARD_HEIGHT } from '../../src/const';
+import { BOARD_WIDTH, BOARD_HEIGHT, DEFAULT_BOARD } from '../../src/const';
 
-let TEST_BOARD = [
-  [1, 3], [2, 3], [3, 3],
-  [12, 12], [12, 13], [13, 12], [13, 13]
-];
+let TEST_BOARD = DEFAULT_BOARD;
 
 describe('Board' , () => {
   let component;

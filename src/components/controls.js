@@ -30,7 +30,7 @@ export class Controls extends Component {
         <button className="btn btn-primary toggle-pause" onClick={this.onPause}>Pause</button>
         <button className="btn btn-danger slow-down" onClick={this.onSpeedDown}>Slow down</button>
         <button className="btn btn-success speed-up" onClick={this.onSpeedUp}>Speed up</button>
-        <span>Speed: { speedString }</span>
+        <span className="speed-indicator">{ `Speed: ${speedString}` }</span>
       </div>
     );
   }
