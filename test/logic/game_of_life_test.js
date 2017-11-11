@@ -33,4 +33,18 @@ describe('GameOfLife' , () => {
     expect(gol.isCellAlive([2, 6])).to.be.false;
   });
 
+  it('calculates the next step correctly', () => {
+    let cellsAlive = [
+      [1, 3], [2, 3], [3, 3],
+      [10, 4], [10, 5], [9, 4], [8, 4],
+      [15, 7], [15, 6], [14, 7], [14, 8], [16, 7],
+      [12, 12], [12, 13], [13, 12], [13, 13]
+    ];
+    let gol = new GameOfLife(cellsAlive);
+    gol.nextStep();
+    expect(gol.cellsAlive).to.deep.equal([[2,3],[10,4],[10,5],[9,4],[15,6],[14,7],[14,8],[16,7],[12,12],[12,13],[13,12],[13,13],[2,2],[2,4],[9,3],[14,6],[16,6]]);
+    gol.nextStep();
+    expect(gol.cellsAlive).to.deep.equal([[2,3],[10,4],[10,5],[9,4],[14,7],[16,7],[12,12],[12,13],[13,12],[13,13],[9,3],[14,6],[16,6],[1,3],[3,3],[10,3],[9,5],[15,5],[13,7],[15,8]]);
+  });
+
 });
