@@ -37,12 +37,12 @@ class Board extends Component {
     for (let x = 0; x < BOARD_WIDTH; x += 1) {
       let alive = this.props.board.isCellAlive([x, y]);
       cells.push(
-        <td className={`cell ${ alive ? 'alive' : ''}`} onClick={() => this.onToggleCell([x, y])}></td>
+        <td key={'cell' + [x, y].toString()} className={`cell ${ alive ? 'alive' : ''}`} onClick={() => this.onToggleCell([x, y])}></td>
       );
     }
 
     return (
-      <tr>
+      <tr key={'row' + y}>
         { cells }
       </tr>
     );
