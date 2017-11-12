@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount, render } from 'enzyme';
-import App from '../../src/components/app';
+import { App } from '../../src/components/app';
 
 describe('App' , () => {
   let component;

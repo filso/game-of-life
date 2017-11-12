@@ -7,7 +7,7 @@ import Controls from './controls';
 import { NEXT_STEP } from '../actions/types';
 import { STEP_LENGTH_MILLISEC } from '../const';
 
-class App extends Component {
+export class App extends Component {
 
   constructor(props) {
     super(props);
