@@ -6,7 +6,7 @@ import { BOARD_WIDTH, BOARD_HEIGHT } from '../const';
 import { NEXT_STEP } from '../actions/types';
 import { toggleCell } from '../actions';
 
-class Board extends Component {
+export class Board extends Component {
 
   constructor(props) {
     super(props);

@@ -6,13 +6,14 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
   "jest": {
-    "setupTestFrameworkScriptFile": "./__tests__/setup"
+    "setupFiles": ["raf/polyfill"],
+    "setupTestFrameworkScriptFile": "./setup_tests"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",

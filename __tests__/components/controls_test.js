@@ -1,5 +1,8 @@
-import { renderComponent , expect } from '../test_helper';
+import React from 'react';
 import { Controls } from '../../src/components/controls';
+import { shallow, mount, render } from 'enzyme';
+import { expect } from 'chai';
+
 import sinon from 'sinon';
 
 const TEST_SPEED = 5;
@@ -14,7 +17,7 @@ describe('Controls' , () => {
   };
 
   beforeEach(() => {
-    component = renderComponent(Controls, mockProps);
+    component = shallow(<Controls  {...mockProps} />);
   });
 
   it('has a working speed up button', () => {
@@ -45,6 +48,6 @@ describe('Controls' , () => {
 
   it('has speed indicator', () => {
     let indicatorSpan = component.find('.speed-indicator');
-    expect(indicatorSpan).to.contain(`Speed: ${TEST_SPEED}`);
+    expect(indicatorSpan.contains(`Speed: ${TEST_SPEED}`)).to.equal(true);
   });
 });

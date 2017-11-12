@@ -1,5 +1,5 @@
 import GameOfLife from '../../src/logic/game_of_life';
-import { expect } from '../test_helper';
+import { expect } from 'chai';
 
 describe('GameOfLife' , () => {
 
