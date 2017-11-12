@@ -1,5 +1,5 @@
 {
-  "name": "redux-simple-starter",
+  "name": "game-of-life",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.js",
@@ -11,6 +11,9 @@
   },
   "author": "",
   "license": "ISC",
+  "jest": {
+    "setupTestFrameworkScriptFile": "./__tests__/setup"
+  },
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -18,8 +21,11 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
-    "jquery": "^2.2.1",
-    "jsdom": "^8.1.0",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "jest": "^21.2.1",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.3.0",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
     "sinon": "^4.1.2",
@@ -29,10 +35,10 @@
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-redux": "4.3.0",
-    "react-router": "^2.0.1",
+    "react": "16",
+    "react-dom": "16",
+    "react-redux": "5.0.6",
+    "react-router": "^4.2.0",
     "redux": "^3.0.4"
   }
 }
