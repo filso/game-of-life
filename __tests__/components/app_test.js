@@ -1,11 +1,13 @@
-import { renderComponent , expect } from '../test_helper';
+import React from 'react';
+import { expect } from 'chai';
+import { shallow, mount, render } from 'enzyme';
 import App from '../../src/components/app';
 
 describe('App' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    component = shallow(<App />);
   });
 
   it('has board', () => {
