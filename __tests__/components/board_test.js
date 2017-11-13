@@ -39,8 +39,8 @@ describe('Board' , () => {
     expect(tdAlive.length).to.equal(TEST_BOARD.length);
   });
 
-  // it('shows alive cells info', () => {
-  //   let cellsInfo = component.find('.cells-info');
-  //   expect(cellsInfo.contains(`Cells alive: ${TEST_BOARD.length}`)).to.equal(true);
-  // });
+  it('shows alive cells info', () => {
+    let cellsInfo = component.find('.cells-info');
+    expect(cellsInfo.text()).to.equal(`Cells alive: ${TEST_BOARD.length}`);
+  });
 });
